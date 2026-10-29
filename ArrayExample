@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class UserArrayExample {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        String[] fruit = new String[3];
+        int index = 0;
+        int printIndex = 0;
+        
+        System.out.println("Please enter 3 of your favorite fruits:");
+        
+        while (index < fruit.length) {
+            System.out.print("fruit " + (index + 1) + ": ");
+            String input = scan.nextLine();
+        
+            fruit[index] = input;
+            index++;
+        }
+        System.out.println("\n----------------------------------");
+        System.out.println("Here is your fruit list:");
+        
+        while (printIndex < index) {
+            System.out.println("- " + fruit[printIndex]);
+            printIndex++;
+        }
+        
+        }
+    }
